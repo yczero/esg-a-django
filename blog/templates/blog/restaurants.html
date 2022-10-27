@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+</head>
+
+<body>
+
+    <h1> 레스토랑 </h1>
+
+
+    {% for post in res_list %}
+    <hr/>
+        <h2>
+            <a href="{{ post.get_absolute_url }}"> 
+            {% comment %} <a href="/blog/{{ post.pk }}/">  {% endcomment %}
+            {{ post.name }}
+            </a>
+        </h2>
+        <h4>{{ post.description }}</h4>
+        <p>{{ post.avarage_score }}</p>
+
+    {% endfor %}
+
+    <hr/>
+    <a href = "/blog/restaurants/new/"> 새글 작성</a>
+
+</body>
+
+</html>

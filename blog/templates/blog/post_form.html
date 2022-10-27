@@ -1,0 +1,9 @@
+{% comment %} {{ form.as_table }} {% endcomment %}
+<h2>새 포스팅 쓰기 </h2>
+<form acion =" " method = "post" novalidate>
+    {% csrf_token %}
+        <table>
+            {{ form.as_table  }}
+        </table>
+        <input type="submit" / >
+</form> 
